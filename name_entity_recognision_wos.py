@@ -27,7 +27,7 @@ def unique(list1):
     return unique_list
 
 
-path_to_files = 'C:\\Users\\mmocak\\PycharmProjects\\pythonLearning\\PythonWebScraping\\webofstories_beautifulSoup\\stories\\test'
+path_to_files = 'C:\\Users\\mmocak\\PycharmProjects\\webofstories_analysis\\stories\\test'
 # path_to_file = 'stories/john-wheeler.txt'
 #path_to_files = 'stories\\test'
 
@@ -48,6 +48,9 @@ for file in os.listdir():
 
         # call read text file function
         raw_text = read_text_file(file_path)
+
+        # https://stackoverflow.com/questions/50487495/what-is-difference-between-en-core-web-sm-en-core-web-mdand-en-core-web-lg-mod
+        # try mg or lg models
 
         # this is required to run from terminal > python -m spacy download en_core_web_sm
         NER = spacy.load("en_core_web_sm", disable=["tok2vec", "tagger", "parser", "attribute_ruler", "lemmatizer"])
@@ -77,9 +80,14 @@ for file in os.listdir():
 # Print the output.
 # print(df_final)
 
-df_final.to_pickle("a_file.pkl")
+df_final.to_pickle("../../a_file.pkl")
 
 
 # for w in text.ents:
 #    if w.label_ == 'ORG':
 #        print(w.text)
+
+
+
+# TRY THIS MODEL
+# https://towardsdatascience.com/superior-person-name-recognition-with-pre-built-google-bert-e6215186eae0
