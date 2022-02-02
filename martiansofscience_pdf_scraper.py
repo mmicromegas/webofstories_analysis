@@ -14,11 +14,11 @@ pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 # print(pdfReader.numPages)
 
 NamesList = ["Theodore von Karman","Leo Szilard","Eugene P Wigner","John von Neumann","Edward Teller"]
-NamesRangeDict = {NamesList[0]: [[29,32],[58,67]]}
-NamesRangeDict[NamesList[1]] = [[32,34],[67,76]]
-NamesRangeDict[NamesList[2]] = [[34,35],[76,83]]
-NamesRangeDict[NamesList[3]] = [[35,36],[83,85]]
-NamesRangeDict[NamesList[4]] = [[36,37],[85,89]]
+NamesRangeDict = {NamesList[0]: [[29,32],[58,67],[91,97],[129,136],[172,177]]}
+NamesRangeDict[NamesList[1]] = [[32,34],[67,76],[97,105],[136,154],[178,193]]
+NamesRangeDict[NamesList[2]] = [[34,35],[76,83],[105,121],[155,162],[194,195]]
+NamesRangeDict[NamesList[3]] = [[35,36],[83,85],[121,122],[162,165],[196,199]]
+NamesRangeDict[NamesList[4]] = [[36,37],[85,89],[122,128],[166,170],[200,225]]
 
 
 #for name in NamesList:

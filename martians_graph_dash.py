@@ -26,17 +26,17 @@ df = output
 df1 = df.groupby(['Source','Target']).size().reset_index().rename(columns={0:'count'})
 df = df1
 
-# df1 = df.value_counts(ascending=True).reset_index(name='count')
+#df1 = df.value_counts(ascending=True).reset_index(name='count')
 #print(df1)
 
-#df1_mask=df1['count']>=20
-#filtered_df1 = df1[df1_mask]
+df1_mask=df1['count']>=1
+filtered_df1 = df1[df1_mask]
 
 value_list = ["lambda lambda"]
-df_mask=~df.Target.isin(value_list) # the tilde leads to reverse boolean mask
-filtered_df = df[df_mask]
+df_mask=~filtered_df1.Target.isin(value_list) # the tilde leads to reverse boolean mask
+filtered_df2 = filtered_df1[df_mask]
 
-df = filtered_df
+df = filtered_df2
 #print(df[df["Source"] == "Murray Gell-Mann"])
 # https://towardsdatascience.com/visualizing-networks-in-python-d70f4cbeb259
 
